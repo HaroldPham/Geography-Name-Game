@@ -1,3 +1,9 @@
 Neccessities:
   - Jframe/JPanel?
   - File Processing
+  
+Ideas:
+  - Modes:
+    . Marathon - name as much countries you can in  your selected continent.
+    . Quiz - given a continent name an area in it, if you can't you lose.
+    
