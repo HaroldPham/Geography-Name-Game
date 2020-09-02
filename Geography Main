@@ -3,7 +3,6 @@
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
  * Creation date: 9/2/2020
  */
-import
 import java.util.*;
 import java.awt.*;
 import java.io.*;
@@ -11,6 +10,7 @@ import javax.swing.*;
 
 public class GeographyMain {
 
+	
 	public static void main(String[] args) 
 	{
 		//JFrame setup
@@ -21,6 +21,7 @@ public class GeographyMain {
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
 				frame.pack(); //Apply size changes
 				frame.setResizable(false);
+				frame.setAlwaysOnTop(true);
 				
 				JLabel label = new JLabel("Welcome to the Geography Game!");
 				label.setPreferredSize(new Dimension(200,100));
@@ -39,6 +40,11 @@ public class GeographyMain {
 				 } catch (Exception ex) {
 					 System.out.println("Error found in input file.");
 				 }
+	}
+	
+	public void processFile(ArrayList<String> c, Scanner scan, String txt)
+	{
+		
 	}
 
 }
