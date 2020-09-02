@@ -2,8 +2,23 @@ import java.util.*;
 import java.io.*;
 public class GeographyMain {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) 
+	{
+	//JFrame setup
+		JFrame frame = new JFrame("Geography Name Game"); //Create the frame
+		//Set up the frame
+		frame.setVisible(true); //Visibility
+		frame.setPreferredSize(new Dimension(800,600)); //Create a dimension object to fit into the size of the window
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
+		frame.pack(); //Apply size changes
+
+		
+		JLabel label = new JLabel("Welcome to the Geography Game!");
+		label.setPreferredSize(new Dimension(200,100));
+		
+		frame.getContentPane().add(label,SwingConstants.CENTER);
+		
+		//List Input For countries
 		 ArrayList<String> countries = new ArrayList<String>(); 
 		 try {
 			 File inFile = new File("CountriesAlphabetized.txt");
