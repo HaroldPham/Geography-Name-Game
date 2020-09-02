@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+public class GeographyMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 ArrayList<String> countries = new ArrayList<String>(); 
+		 try {
+			 File inFile = new File("CountriesAlphabetized.txt");
+			 Scanner scan = new Scanner (inFile);
+			 while (scan.hasNextLine()) {
+				 countries.add(scan.nextLine());
+			 }
+			 
+		 } catch (Exception ex) {
+			 System.out.println("Error found in input file.");
+		 }
+	}
+
+}
