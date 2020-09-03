@@ -62,7 +62,33 @@ public class GeographyMain {
 	
 	public void processFile(ArrayList<String> c, Scanner scan, String txt)
 	{
-		
+		  if (name == "Africa")
+		  {
+			  ArrayList<String> Africa = new ArrayList<String>();
+			  try 
+			  {
+				 File inFile = new File("Africa.txt");
+				 scan = new Scanner (inFile);
+				 while(scan.hasNextLine()) 
+				 {
+					 Africa.add(scan.nextLine());
+				 }
+				 
+			  } 
+			  catch (Exception ex) 
+			  {
+				 System.out.println("Error found in input file.");
+			  }
+		  }
+		  else if ()
+		  {
+			  //continue with other lists.
+		  }
+		  
+		  else
+		  {
+		  	System.out.println("That is not a valid option. Please refresh and try again.");
+		  }
 	}
 
 }
