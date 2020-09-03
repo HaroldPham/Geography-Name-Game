@@ -1,5 +1,3 @@
-package main;
-
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
@@ -49,9 +47,10 @@ public class GeographyMain {
 				 }
 	}
 	
+	//Will process the ArrayLists for each continent
 	public void processFile(Scanner scan, String name)
 	{
-		  if (name == "Africa")
+		  if (name == "Africa") //Africa
 		  {
 			  Africa = new ArrayList<String>();
 			  try 
@@ -69,7 +68,7 @@ public class GeographyMain {
 				 System.out.println("Error found in input file.");
 			  }
 		  }
-		  else if (name == "Europe")
+		  else if (name == "Europe") //Europe
 		  {
 			  Europe = new ArrayList<String>();
 			  try 
@@ -87,7 +86,7 @@ public class GeographyMain {
 				 System.out.println("Error found in input file.");
 			  }
 		  }
-		  else if (name == "NorthAmerica")
+		  else if (name == "NorthAmerica") //North America
 		  {
 			  NorthAmerica = new ArrayList<String>();
 			  try 
@@ -105,7 +104,7 @@ public class GeographyMain {
 				 System.out.println("Error found in input file.");
 			  }
 		  }
-		  else if (name == "SouthAmerica")
+		  else if (name == "SouthAmerica") //South America
 		  {
 			  SouthAmerica = new ArrayList<String>();
 			  try 
@@ -123,7 +122,7 @@ public class GeographyMain {
 				 System.out.println("Error found in input file.");
 			  }
 		  }
-		  else if (name == "Asia")
+		  else if (name == "Asia") //Asia
 		  {
 			  Asia = new ArrayList<String>();
 			  try 
@@ -141,7 +140,7 @@ public class GeographyMain {
 				 System.out.println("Error found in input file.");
 			  }
 		  }
-		  else if (name == "Australia")
+		  else if (name == "Australia") //Australia
 		  {
 			  Australia = new ArrayList<String>();
 			  try 
