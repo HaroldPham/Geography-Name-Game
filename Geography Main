@@ -40,6 +40,24 @@ public class GeographyMain {
 				 } catch (Exception ex) {
 					 System.out.println("Error found in input file.");
 				 }
+				 /*
+		  * if (name == "Africa"){
+		  * 	ArrayList<String> Africa = new ArrayList<String>();
+		  * try {
+			 File inFile = new File("Africa.txt");
+			 Scanner scan = new Scanner (inFile);
+			 while (scan.hasNextLine()) {
+				 Africa.add(scan.nextLine());
+			 }
+			 
+		 } catch (Exception ex) {
+			 System.out.println("Error found in input file.");
+		 }
+		  * }
+		  * else if (){} else{
+		  * 	System.out.println("That is not a valid option. Please refresh and try again.");
+		  * }
+		 */
 	}
 	
 	public void processFile(ArrayList<String> c, Scanner scan, String txt)
