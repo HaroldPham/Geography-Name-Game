@@ -1,3 +1,5 @@
+package main;
+
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
@@ -9,7 +11,12 @@ import java.io.*;
 import javax.swing.*;
 
 public class GeographyMain {
-
+	public ArrayList<String> Africa;
+	public ArrayList<String> Europe;
+	public ArrayList<String> NorthAmerica;
+	public ArrayList<String> SouthAmerica;
+	public ArrayList<String> Australia;
+	public ArrayList<String> Asia;
 	
 	public static void main(String[] args) 
 	{
@@ -40,31 +47,13 @@ public class GeographyMain {
 				 } catch (Exception ex) {
 					 System.out.println("Error found in input file.");
 				 }
-				 /*
-		  * if (name == "Africa"){
-		  * 	ArrayList<String> Africa = new ArrayList<String>();
-		  * try {
-			 File inFile = new File("Africa.txt");
-			 Scanner scan = new Scanner (inFile);
-			 while (scan.hasNextLine()) {
-				 Africa.add(scan.nextLine());
-			 }
-			 
-		 } catch (Exception ex) {
-			 System.out.println("Error found in input file.");
-		 }
-		  * }
-		  * else if (){} else{
-		  * 	System.out.println("That is not a valid option. Please refresh and try again.");
-		  * }
-		 */
 	}
 	
-	public void processFile(ArrayList<String> c, Scanner scan, String txt)
+	public void processFile(Scanner scan, String name)
 	{
 		  if (name == "Africa")
 		  {
-			  ArrayList<String> Africa = new ArrayList<String>();
+			  Africa = new ArrayList<String>();
 			  try 
 			  {
 				 File inFile = new File("Africa.txt");
@@ -80,11 +69,96 @@ public class GeographyMain {
 				 System.out.println("Error found in input file.");
 			  }
 		  }
-		  else if ()
+		  else if (name == "Europe")
 		  {
-			  //continue with other lists.
+			  Europe = new ArrayList<String>();
+			  try 
+			  {
+				 File inFile = new File("Europe.txt");
+				 scan = new Scanner (inFile);
+				 while(scan.hasNextLine()) 
+				 {
+					 Europe.add(scan.nextLine());
+				 }
+				 
+			  } 
+			  catch (Exception ex) 
+			  {
+				 System.out.println("Error found in input file.");
+			  }
 		  }
-		  
+		  else if (name == "NorthAmerica")
+		  {
+			  NorthAmerica = new ArrayList<String>();
+			  try 
+			  {
+				 File inFile = new File("NorthAmerica.txt");
+				 scan = new Scanner (inFile);
+				 while(scan.hasNextLine()) 
+				 {
+					 NorthAmerica.add(scan.nextLine());
+				 }
+				 
+			  } 
+			  catch (Exception ex) 
+			  {
+				 System.out.println("Error found in input file.");
+			  }
+		  }
+		  else if (name == "SouthAmerica")
+		  {
+			  SouthAmerica = new ArrayList<String>();
+			  try 
+			  {
+				 File inFile = new File("SouthAmerica.txt");
+				 scan = new Scanner (inFile);
+				 while(scan.hasNextLine()) 
+				 {
+					 SouthAmerica.add(scan.nextLine());
+				 }
+				 
+			  } 
+			  catch (Exception ex) 
+			  {
+				 System.out.println("Error found in input file.");
+			  }
+		  }
+		  else if (name == "Asia")
+		  {
+			  Asia = new ArrayList<String>();
+			  try 
+			  {
+				 File inFile = new File("Asia.txt");
+				 scan = new Scanner (inFile);
+				 while(scan.hasNextLine()) 
+				 {
+					 Asia.add(scan.nextLine());
+				 }
+				 
+			  } 
+			  catch (Exception ex) 
+			  {
+				 System.out.println("Error found in input file.");
+			  }
+		  }
+		  else if (name == "Australia")
+		  {
+			  Australia = new ArrayList<String>();
+			  try 
+			  {
+				  File inFile = new File("Australia.txt");
+				  scan = new Scanner (inFile);
+				  while(scan.hasNextLine()) 
+				  {
+					  Australia.add(scan.nextLine());
+				  }
+				 
+			  } 
+			  catch (Exception ex) 
+			  {
+				  System.out.println("Error found in input file.");
+			  }
+		  }
 		  else
 		  {
 		  	System.out.println("That is not a valid option. Please refresh and try again.");
