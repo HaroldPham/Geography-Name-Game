@@ -1,1 +1,45 @@
-
+Antigua and Barbuda - St. John's
+Anguilla - The Valley (territory of U.K.)
+Aruba - Oranjestad (Constituent country of the Kingdom of the Netherlands)
+The Bahamas - Nassau
+Barbados - Bridgetown
+Belize - Belmopan ( Central America)
+Bermuda - Hamilton (territory of U.K.)
+Bonaire - part of the Netherlands
+British Virgin Islands - Road Town (territory of U.K.)
+Canada - Ottawa
+Cayman Islands - George Town (territory of U.K.)
+Clipperton Island - (territory of France)
+Costa Rica - San José ( Central America)
+Cuba - Havana
+Curaçao - Willemstad (Constituent country of the Kingdom of the Netherlands)
+Dominica - Roseau
+Dominican Republic (Republica Dominicana) - Santo Domingo
+El Salvador - San Salvador ( Central America)
+Greenland - Nuuk (territory of Denmark)
+Grenada - St George's
+Guadeloupe - (territory of France)
+Guatemala - Guatemala
+Haiti - Port-au-Prince
+Honduras - Tegucigalpa ( Central America)
+Jamaica - Kingston
+Martinique - Fort-de-France Bay (territory of France)
+Mexico - Mexico City
+Montserrat - Plymouth, Brades, Little Bay (territory of U.K.)
+Navassa Island - Washington, D.C. (territory of U.S.)
+Nicaragua - Managua ( Central America)
+Panama (Panamá) - Panama City ( Central America)
+Puerto Rico - San Juan (territory of U.S.)
+Saba - The Bottom (territory of Netherlands)
+Saint Barthelemy - Gustavia (territory of France)
+Saint Kitts and Nevis - Basseterre
+Saint Lucia - Castries
+Saint Martin - Marigot (territory of France)
+Saint Pierre and Miquelon - Saint-Pierre (territory of France)
+Saint Vincent and the Grenadines - Kingstown
+Sint Eustatius - Oranjestad (territory of Netherlands)
+Sint Maarten - Philipsburg (Constituent country of the Kingdom of the Netherlands)
+Trinidad and Tobago - Port of Spain
+Turks and Caicos - Cockburn Town (British Overseas Territory)
+United States of America - Washington, District of Columbia
+US Virgin Islands - Charlotte Amalie (territory of U.S.)
