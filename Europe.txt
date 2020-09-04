@@ -1,1 +1,46 @@
-
+Albania - Tirana
+Andorra - Andorra la Vella
+Austria - Vienna
+Belarus - Minsk
+Belgium - Brussels
+Bosnia and Herzegovina - Sarajevo
+Bulgaria - Sofia
+Croatia - Zagreb
+Cyprus - Nicosia
+Czech Republic - Prague
+Denmark - Copenhagen
+Estonia - Tallinn
+Finland - Helsinki
+France - Paris
+Germany - Berlin
+Greece - Athens
+Hungary - Budapest
+Iceland - Reykjavik
+Republic of Ireland - Dublin
+Italy - Rome
+Kosovo - Pristina
+Latvia - Riga
+Liechtenstein - Vaduz
+Lithuania - Vilnius
+Luxembourg - Luxembourg City
+North Macedonia - Skopje
+Malta - Valletta
+Moldova - Chisinau
+Monaco - Monte Carlo Quarter
+Montenegro - Podgorica
+Netherlands - Amsterdam (Capital)
+Norway - Oslo
+Poland - Warsaw
+Portugal - Lisbon
+Romania - Bucharest
+Russia Moscow
+San Marino - San Marino
+Serbia - Belgrade
+Slovakia - Bratislava
+Slovenia - Ljubljana
+Spain - Madrid
+Sweden - Stockholm
+Switzerland - Bern
+Ukraine - Kyiv or Kiev
+United Kingdom - London
+Vatican City - Vatican City
