@@ -1,48 +1,48 @@
-Afghanistan - Kabul
-Armenia - Yerevan
-Azerbaijan - Baku
-Bahrain - Manama
-Bangladesh [1](বাংলাদেশ) - Dhaka (ঢাকা)
-Bhutan - Thimphu
-Brunei - Bandar Seri Begawan
-Cambodia (Kampuchea) - Phnom Penh
-China - Beijing
-East Timor (Timor Leste) - Dili
-Georgia - Tbilisi
-India - New Delhi
-Indonesia - Jakarta
-Iran - Tehran
-Iraq - Baghdad
-Israel - Jerusalem
-Japan - Tokyo
-Jordan (Al Urdun) - Amman
-Kazakhstan - nursultan
-Kuwait - Kuwait city
-Kyrgyzstan - Bishkek
-Laos - Vientiane
-Lebanon (Lubnan) - Beirut
-Malaysia - Kuala Lumpur
-Maldives - Malé
-Mongolia - Ulaanbaatar
-Myanmar (Burma) - Naypyidaw
-Nepal - Kathmandu
-North Korea - Pyongyang
-Oman - Muscat
-Pakistan - Islamabad
-Philippines - Manila
-Qatar - Doha
-Russia - Moscow (Russia is a part of Asia geographically,but politically it is a part of Europe)
-Saudi Arabia - Riyadh
-Singapore - Singapore
-South Korea - Seoul
-Sri Lanka - Sri Jayawardenapura Kotte (administrative), Colombo (commercial)
-Syria - Damascus
-Tajikistan - Dushanbe
-Thailand (Muang Thai) - Bangkok
-Turkey - Ankara
-Turkmenistan - Aşgabat
-Taiwan - Taipei
-United Arab Emirates - Abu Dhabi
-Uzbekistan - Tashkent
-Vietnam - Hanoi
-Yemen - Sana'a
+Afghanistan
+Armenia
+Azerbaijan
+Bahrain
+Bangladesh
+Bhutan
+Brunei
+Cambodia (Kampuchea)
+China
+East Timor (Timor Leste)
+Georgia
+India
+Indonesia
+Iran
+Iraq
+Israel
+Japan
+Jordan (Al Urdun)
+Kazakhstan
+Kuwait
+Kyrgyzstan
+Laos
+Lebanon (Lubnan)
+Malaysia
+Maldives
+Mongolia
+Myanmar (Burma)
+Nepal
+North Korea
+Oman
+Pakistan
+Philippines
+Qatar
+Russia (Russia is a part of Asia geographically,but politically it is a part of Europe)
+Saudi Arabia
+Singapore
+South Korea
+Sri Lanka
+Syria
+Tajikistan
+Thailand (Muang Thai)
+Turkey
+Turkmenistan
+Taiwan
+United Arab Emirates
+Uzbekistan
+Vietnam
+Yemen
