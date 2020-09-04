@@ -9,13 +9,13 @@ import java.io.*;
 import javax.swing.*;
 
 public class GeographyMain {
-	public ArrayList<String> Africa;
-	public ArrayList<String> Europe;
-	public ArrayList<String> NorthAmerica;
-	public ArrayList<String> SouthAmerica;
-	public ArrayList<String> Australia;
-	public ArrayList<String> Asia;
-	
+	private static ArrayList<String> Africa;
+	private static ArrayList<String> Europe;
+	private static ArrayList<String> NorthAmerica;
+	private static ArrayList<String> SouthAmerica;
+	private static ArrayList<String> Australia;
+	private static ArrayList<String> Asia;
+	private static Scanner scan;
 	public static void main(String[] args) 
 	{
 		//JFrame setup
@@ -33,22 +33,19 @@ public class GeographyMain {
 				
 				frame.getContentPane().add(label,SwingConstants.CENTER);
 				
-				//List Input For countries
-				 ArrayList<String> countries = new ArrayList<String>(); 
-				 try {
-					 File inFile = new File("CountriesAlphabetized.txt");
-					 Scanner scan = new Scanner (inFile);
-					 while (scan.hasNextLine()) {
-						 countries.add(scan.nextLine());
-					 }
-					 
-				 } catch (Exception ex) {
-					 System.out.println("Error found in input file.");
-				 }
+				//Import the files into the ArrayLists
+				processFile("Africa");
+				processFile("Europe");
+				processFile("Asia");
+				processFile("NorthAmerica");
+				processFile("SouthAmerica");
+				processFile("Australia");
+				
+				
 	}
 	
 	//Will process the ArrayLists for each continent
-	public void processFile(Scanner scan, String name)
+	public static void processFile(String name)
 	{
 		  if (name == "Africa") //Africa
 		  {
