@@ -5,16 +5,12 @@
  */
 import java.util.*;
 import java.awt.*;
-import java.io.*;
 import javax.swing.*;
-/*
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-*/
+import java.io.*;
+
+//Removed extra imports because the ones above suffice.
+
+
 public class GeographyMain {
 	private static ArrayList<String> Africa;
 	private static ArrayList<String> Europe;
@@ -34,11 +30,14 @@ public class GeographyMain {
 				frame.pack(); //Apply size changes
 				frame.setResizable(false);
 				frame.setAlwaysOnTop(true);
+				frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
 				
 				JLabel label = new JLabel("Welcome to the Geography Game!");
 				label.setPreferredSize(new Dimension(200,100));
-				
+			
 				frame.getContentPane().add(label,SwingConstants.CENTER);
+				
+				
 				
 				//Import the files into the ArrayLists
 				processFile("Africa");
