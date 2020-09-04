@@ -1,15 +1,15 @@
-Argentina - Buenos Aires
-Bolivia - Sucré
-Brazil (Brasil) - Brasília
-Chile - Santiago
-Colombia - Bogotá
-Ecuador - Quito
-Falkland Islands - Stanley (territory of U.K.)
-French Guiana - Cayenne (territory of France)
-Guyana - Georgetown
-Paraguay - Asunción
-Peru - Lima
-South Georgia and the South Sandwich Islands - (territory of U.K.)
-Suriname - Paramaribo
-Uruguay - Montevideo
-Venezuela - Caracas
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+French Guiana
+Guyana
+Paraguay
+Peru
+South Georgia
+Suriname
+Uruguay
+Venezuela
