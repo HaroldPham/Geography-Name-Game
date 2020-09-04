@@ -40,7 +40,9 @@ public class GeographyMain {
 				processFile("NorthAmerica");
 				processFile("SouthAmerica");
 				processFile("Australia");
-				
+				Scanner keyboardInput = new Scanner (System.in);
+		 System.out.println("Which continent would you like to attempt?");
+		 String name = keyboardInput.nextLine();
 				
 	}
 	
