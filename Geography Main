@@ -171,6 +171,7 @@ public class GeographyMain {
 	}
 
 }
+https://javatutorial.net/jframe-buttons-listeners-text-fields
 SimpleJButton(){    
         JFrame f=new JFrame("Button Example"); 
                     //submit button
