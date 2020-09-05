@@ -70,6 +70,38 @@ public class GeographyMain {
 					label1.setText("Name has been submitted.");                
 				 }          
 				  });
+				  /*
+				   JFrame f=new JFrame("Button Example"); 
+         //submit button
+			JButton b=new JButton("Submit");    
+			b.setBounds(100,100,140, 40);    
+			         //enter name label
+			JLabel label1 = new JLabel();        
+			label1.setText("Enter Name :");
+			label1.setBounds(10, 10, 100, 100);
+			         //empty label which will show event after button clicked
+			JLabel label11 = new JLabel();
+			label11.setBounds(10, 110, 200, 100);
+			         //textfield to enter name
+			JTextField textfield= new JTextField();
+			textfield.setBounds(110, 50, 130, 30);
+			         //add to frame
+			f.add(label11);
+			f.add(textfield);
+			f.add(label11);
+			f.add(b);    
+			f.setSize(300,300);    
+			f.setLayout(null);    
+			f.setVisible(true);    
+			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			b.addActionListener(new ActionListener() {
+	            
+	            @Override
+	            public void actionPerformed(ActionEvent arg0) {
+	                    label1.setText("Name has been submitted.");                
+	            }          
+	          });
+				  */
         }         
     
     
