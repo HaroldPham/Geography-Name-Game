@@ -31,11 +31,11 @@ public class GeographyMain {
 				frame.setResizable(false);
 				frame.setAlwaysOnTop(true);
 				frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
-				
-				JLabel label = new JLabel("Welcome to the Geography Game!");
-				label.setPreferredSize(new Dimension(200,100));
 			
-				frame.getContentPane().add(label,SwingConstants.CENTER);
+				JLabel title = new JLabel("Welcome to the Geography Game!");
+				title.setPreferredSize(new Dimension(200,100));
+			
+				frame.getContentPane().add(title, SwingConstants.CENTER);
 				
 				JFrame f=new JFrame("Button Example"); 
 				
@@ -53,14 +53,11 @@ public class GeographyMain {
 				JTextField textfield= new JTextField();
 				textfield.setBounds(110, 50, 130, 30);
 					    //add to frame
-				f.add(label1);
-				f.add(textfield);
-				f.add(label);
-				f.add(b);    
-				f.setSize(300,300);    
-				f.setLayout(null);    
-				f.setVisible(true);    
-				f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   
+				frame.add(label1);
+				frame.add(textfield);
+				frame.add(label);
+				frame.add(b);    
+				f.setLayout(null);     
 
 				//action listener
 				b.addActionListener(new ActionListener() {
@@ -101,13 +98,7 @@ public class GeographyMain {
 	                    label1.setText("Name has been submitted.");                
 	            }          
 	          });
-				  */
-        }         
-    
-    
-        public static void main(String[] args) {    
-            new SimpleJButton();    
-				
+				  */        		
 				//Import the files into the ArrayLists
 				processFile("Africa");
 				processFile("Europe");
@@ -239,9 +230,3 @@ public class GeographyMain {
 	}
 
 }
-https://javatutorial.net/jframe-buttons-listeners-text-fields
-https://www.craftingez6-coding.com/how-to-create-button-in-jframe/
-https://www.javatpoint.com/java-jbutton
-SimpleJButton(){    
-        
-        }    
