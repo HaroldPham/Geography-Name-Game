@@ -172,6 +172,8 @@ public class GeographyMain {
 
 }
 https://javatutorial.net/jframe-buttons-listeners-text-fields
+https://www.craftingez6-coding.com/how-to-create-button-in-jframe/
+https://www.javatpoint.com/java-jbutton
 SimpleJButton(){    
         JFrame f=new JFrame("Button Example"); 
                     //submit button
