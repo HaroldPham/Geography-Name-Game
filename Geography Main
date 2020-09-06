@@ -22,20 +22,27 @@ public class GeographyMain {
 	public static void main(String[] args) 
 	{
 		//JFrame setup
-				JFrame frame = new JFrame("Geography Name Game"); //Create the frame
-				//Set up the frame
-				frame.setVisible(true); //Visibility
-				frame.setPreferredSize(new Dimension(800,600)); //Create a dimension object to fit into the size of the window
-				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
-				frame.pack(); //Apply size changes
-				frame.setResizable(false);
-				frame.setAlwaysOnTop(true);
-				frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
-			
-				JLabel title = new JLabel("Welcome to the Geography Game!");
-				title.setPreferredSize(new Dimension(200,100));
-			
-				frame.getContentPane().add(title, SwingConstants.CENTER);
+		JFrame frame = new JFrame("Geography Name Game"); //Create the frame
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
+				
+		//Set up the frame
+		frame.setPreferredSize(new Dimension(800,600)); //Create a dimension object to fit into the size of the window
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
+		frame.setResizable(false); //No resizing
+		frame.setAlwaysOnTop(true); //Keep it above other windows for programming purposes
+		frame.setVisible(true); //Visibility
+		frame.pack();
+				
+		JLabel title = new JLabel("Welcome to the Geography Game!");
+		title.setFont(new Font("Arial", Font.PLAIN, 48));
+		JPanel p = new JPanel();
+		p.add(title);
+				
+		frame.getContentPane().add(p,SwingConstants.CENTER);
+
+		frame.pack();
+				
+				
 				
 				JFrame f=new JFrame("Button Example"); 
 				
