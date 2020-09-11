@@ -312,6 +312,19 @@ public class GeographyMain
 	}
 
 }
+/*	
+ * public static void answer (String answer){	
+ * 		int num = Australia.length();			
+ * do {	
+ * 		if (answer == "" || answer == "" || etc.){	
+ * 			System.out.println ("Correct Answer. Please input another answer:");	
+ * 			num--;	
+ * 		} else{	
+ * 			System.out.println("Incorrect. Please try again.")		
+ * 		}	
+ * 		} while (num > 0);	
+ * }	
+ */
 
 /*
 class RoundButton extends JButton {
