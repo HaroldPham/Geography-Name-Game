@@ -1,17 +1,29 @@
+package main;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Toolkit;
+import java.io.File;
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
  * Creation date: 9/2/2020
  */
-import java.util.*;
-import java.awt.*;
-import javax.swing.*;
-import java.io.*;
-import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SpringLayout;
+import javax.swing.SwingConstants;
 //Removed extra imports because the ones above suffice.
 
 
-public class GeographyMain {
+public class GeographyMain 
+{
 	private static ArrayList<String> Africa;
 	private static ArrayList<String> Europe;
 	private static ArrayList<String> NorthAmerica;
@@ -19,132 +31,10 @@ public class GeographyMain {
 	private static ArrayList<String> Australia;
 	private static ArrayList<String> Asia;
 	private static Scanner scan;
+	private static JFrame frame;
 	public static void main(String[] args) 
 	{
-		//JFrame setup
-		JFrame frame = new JFrame("Geography Name Game"); //Create the frame
-		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
-				
-		//Set up the frame
-		frame.setPreferredSize(new Dimension(800,600)); //Create a dimension object to fit into the size of the window
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
-		frame.setResizable(true); //No resizing
-		frame.setAlwaysOnTop(true); //Keep it above other windows for programming purposes
-		frame.setVisible(true); //Visibility
-		frame.pack();
-				
-		JLabel title = new JLabel("Welcome to the Geography Game!");
-		title.setFont(new Font("Arial", Font.PLAIN, 48));
-		JPanel p = new JPanel();		
-		p.add(title);
-				
-		frame.getContentPane().add(p,SwingConstants.CENTER);
-
-		frame.pack();
-				
-		
-		
-		//Button work
-		Container pane = frame.getContentPane(); //Get the windows interaction space
-		pane.setLayout(new SpringLayout()); //Get a layout manager preset to use (SpringLayout)
-
-		JPanel test = new JPanel(); //Make a JPanel to hold all our components/buttons
-		
-		//Buttons to add
-		JButton m = new JButton("Marathon");   
-		JButton t = new JButton("Timed");
-		JButton q = new JButton("Quiz");
-		
-		//Add buttons
-		pane.add(m);
-		pane.add(t);
-		pane.add(q);
-		
-		//Execute the layout 
-		SpringUtilities.makeCompactGrid(test, 1, test.getComponentCount(), 400, 100, 100, 100);
-		
-		
-		
-		/*
-		//enter name label
-		JLabel label = new JLabel();        
-		label.setText("Choose:");
-		label.setBounds(200, 400, 100, 100);
-		//empty label which will show event after button clicked
-		JLabel label1 = new JLabel("Timed");
-		label1.setBounds(600, 400, 100, 100);
-		
-		
-		
-		//textfield to enter name
-		JTextField textfield= new JTextField();
-		textfield.setBounds(110, 50, 130, 30);
-		
-		
-		//add to frame
-		frame.add(label1);
-		//frame.add(textfield);
-		frame.add(label);
-		*/
-		
-		frame.getContentPane().add(p); //Add the pane to the window so that it will show
-		frame.pack(); //Pack them into that resolution screen
-		
-		/*
-		//action listener
-		b.addActionListener(new ActionListener() {
-
-		public void actionPerformed(ActionEvent arg0) {
-			label1.setText("Name has been submitted.");                
-		 }          
-			});
-		*/
-		
-		
-		
-				  /*
-				   JFrame f=new JFrame("Button Example"); 
-         //submit button
-			JButton b=new JButton("Submit");    
-			b.setBounds(100,100,140, 40);    
-			         //enter name label
-			JLabel label1 = new JLabel();        
-			label1.setText("Enter Name :");
-			label1.setBounds(10, 10, 100, 100);
-			         //empty label which will show event after button clicked
-			JLabel label11 = new JLabel();
-			label11.setBounds(10, 110, 200, 100);
-			         //textfield to enter name
-			JTextField textfield= new JTextField();
-			textfield.setBounds(110, 50, 130, 30);
-			         //add to frame
-			f.add(label11);
-			f.add(textfield);
-			f.add(label11);
-			f.add(b);    
-			f.setSize(300,300);    
-			f.setLayout(null);    
-			f.setVisible(true);    
-			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			b.addActionListener(new ActionListener() {
-	            
-	            @Override
-	            public void actionPerformed(ActionEvent arg0) {
-	                    label1.setText("Name has been submitted.");                
-	            }          
-	          });
-				  */        		
-				//Import the files into the ArrayLists
-				processFile("Africa");
-				processFile("Europe");
-				processFile("Asia");
-				processFile("NorthAmerica");
-				processFile("SouthAmerica");
-				processFile("Australia");
-				Scanner keyboardInput = new Scanner (System.in);
-		 System.out.println("Which continent would you like to attempt?");
-		 String name = keyboardInput.nextLine();
-				
+		createWindow();
 	}
 	
 	//Will process the ArrayLists for each continent
@@ -263,21 +153,166 @@ public class GeographyMain {
 		  	System.out.println("That is not a valid option. Please refresh and try again.");
 		  }
 	}
+	
+	public static void createWindow()
+	{
+		//JFrame setup
+		frame = new JFrame("Geography Name Game"); //Create the frame
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
+
+		//Set up the frame
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
+		frame.setResizable(false); //No resizing
+		frame.setAlwaysOnTop(true); //Keep it above other windows for programming purposes
+		frame.setVisible(true); //Visibility
+		frame.pack();
+		
+		JLabel title = new JLabel("Welcome to the Geography Game!");
+		title.setFont(new Font("Arial", Font.PLAIN, 48));
+		JPanel titleP = new JPanel();		
+		titleP.add(title);
+		
+		frame.getContentPane().add(titleP,SwingConstants.CENTER);
+		
+		frame.pack();
+		
+		
+		//Set up the buttons panel.
+        JPanel p = new JPanel();
+        p.setLayout(new SpringLayout());
+        
+        Icon i = new ImageIcon("image.jpg");
+         
+        //Set up each button.
+        JButton m = new JButton("Marathon");
+        m.setPreferredSize(new Dimension(100,75));
+        m.setIcon(i);
+        
+        JButton t = new JButton("Timed");
+        t.setPreferredSize(new Dimension(100,75));
+        t.setIcon(i);
+        
+        JButton q = new JButton("Quiz");
+        q.setPreferredSize(new Dimension(100,75));
+        q.setIcon(i);
+          
+        //Add the buttons.
+        p.add(m);
+        p.add(t);
+        p.add(q);
+
+        //Use layout manager to set out the pattern
+        SpringUtilities.makeCompactGrid(p, 1,
+                                        p.getComponentCount(),
+                                        100,              115,           117,          100);
+//        						       LeftPad           TopPad       BetweenPad    BottomPad
+        //Display the window.
+        frame.pack();
+        frame.setVisible(true);
+		
+		
+		/*
+		//Button work
+		Container pane = frame.getContentPane(); //Get the windows interaction space
+		pane.setLayout(new SpringLayout()); //Get a layout manager preset to use (SpringLayout)
+		
+		JPanel test = new JPanel(); //Make a JPanel to hold all our components/buttons
+	
+		//Add buttons
+		pane.add(new JButton("Marathon"));
+		pane.add( new JButton("Timed"));
+		pane.add(new JButton("Quiz"));
+		
+		//Execute the layout 
+		SpringUtilities.makeCompactGrid(pane, 1, pane.getComponentCount(), 400, 100, 100, 100);
+		
+		*/
+		
+		
+		
+		
+		/*
+		//enter name label
+		JLabel label = new JLabel();        
+		label.setText("Choose:");
+		label.setBounds(200, 400, 100, 100);
+		//empty label which will show event after button clicked
+		JLabel label1 = new JLabel("Timed");
+		label1.setBounds(600, 400, 100, 100);
+		
+		//textfield to enter name
+		JTextField textfield= new JTextField();
+		textfield.setBounds(110, 50, 130, 30);
+		
+		
+		//add to frame
+		frame.add(label1);
+		//frame.add(textfield);
+		frame.add(label);
+		*/
+		
+		frame.getContentPane().add(p); //Add the pane to the window so that it will show
+		frame.pack(); //Pack them into that resolution screen
+		
+		/*
+		//action listener
+		b.addActionListener(new ActionListener() {
+
+		public void actionPerformed(ActionEvent arg0) {
+			label1.setText("Name has been submitted.");                
+		 }          
+			});
+		*/
+		
+		
+		
+		 /*
+		JFrame f=new JFrame("Button Example"); 
+         //submit button
+			JButton b=new JButton("Submit");    
+			b.setBounds(100,100,140, 40);    
+			         //enter name label
+			JLabel label1 = new JLabel();        
+			label1.setText("Enter Name :");
+			label1.setBounds(10, 10, 100, 100);
+			         //empty label which will show event after button clicked
+			JLabel label11 = new JLabel();
+			label11.setBounds(10, 110, 200, 100);
+			         //textfield to enter name
+			JTextField textfield= new JTextField();
+			textfield.setBounds(110, 50, 130, 30);
+			         //add to frame
+			f.add(label11);
+			f.add(textfield);
+			f.add(label11);
+			f.add(b);    
+			f.setSize(300,300);    
+			f.setLayout(null);    
+			f.setVisible(true);    
+			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			b.addActionListener(new ActionListener() {
+	            
+	            @Override
+	            public void actionPerformed(ActionEvent arg0) {
+	                    label1.setText("Name has been submitted.");                
+	            }          
+	          });
+				  */        		
+				//Import the files into the ArrayLists
+			processFile("Africa");
+			processFile("Europe");
+			processFile("Asia");
+			processFile("NorthAmerica");
+			processFile("SouthAmerica");
+			processFile("Australia");
+			Scanner keyboardInput = new Scanner (System.in);
+			System.out.println("Which continent would you like to attempt?");
+			String name = keyboardInput.nextLine();
+					
+	}
 
 }
-/*
- * public static void answer (String answer){
- * 		int num = Australia.length();		
- * do {
- * 		if (answer == "" || answer == "" || etc.){
- * 			System.out.println ("Correct Answer. Please input another answer:");
- * 			num--;
- * 		} else{
- * 			System.out.println("Incorrect. Please try again.")	
- * 		}
- * 		} while (num > 0);
- * }
- */
+
 /*
 class RoundButton extends JButton {
   public RoundButton() {
