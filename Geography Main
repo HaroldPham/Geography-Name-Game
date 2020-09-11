@@ -205,7 +205,7 @@ public class GeographyMain
         SpringUtilities.makeCompactGrid(p, 1,
                                         p.getComponentCount(),
                                         100,              115,           117,          100);
-//        						       LeftPad           TopPad       BetweenPad    BottomPad
+//        			       LeftPad           TopPad       BetweenPad    BottomPad
         //Display the window.
         frame.pack();
         frame.setVisible(true);
