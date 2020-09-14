@@ -1,15 +1,16 @@
-
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
  * Creation date: 9/2/2020
  */
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -29,10 +30,23 @@ public class GeographyMain
 	private static ArrayList<String> Asia;
 	private static Scanner scan;
 	private static JFrame frame;
+	
+	
 	public static void main(String[] args) 
 	{
+		//Import the files into the ArrayLists
+		processFile("Africa");
+		processFile("Europe");
+		processFile("Asia");
+		processFile("NorthAmerica");
+		processFile("SouthAmerica");
+		processFile("Australia");
+		
+		//Start window process
 		createWindow();
 	}
+	
+	
 	
 	//Will process the ArrayLists for each continent
 	public static void processFile(String name)
@@ -151,8 +165,11 @@ public class GeographyMain
 		  }
 	}
 	
+	
+	
 	public static void createWindow()
 	{
+		
 		//JFrame setup
 		frame = new JFrame("Geography Name Game"); //Create the frame
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
@@ -204,21 +221,26 @@ public class GeographyMain
                                         p.getComponentCount(),
                                         100,              115,           117,          100);
 //        			       LeftPad           TopPad       BetweenPad    BottomPad
+        
         //Display the window.
-		frame.getContentPane().add(p); //Add the pane to the window so that it will show
-		frame.pack(); //Pack them into that resolution screen
+	frame.getContentPane().add(p); //Add the pane to the window so that it will show
+	frame.pack(); //Pack them into that resolution screen
 		
 
-		//Import the files into the ArrayLists
-		processFile("Africa");
-		processFile("Europe");
-		processFile("Asia");
-		processFile("NorthAmerica");
-		processFile("SouthAmerica");
-		processFile("Australia");
-		Scanner keyboardInput = new Scanner (System.in);
-		System.out.println("Which continent would you like to attempt?");
-		String name = keyboardInput.nextLine();
+
+
+		
+		
+	//Button Functions
+	m.addActionListener(new ActionListener() //Button click listener for marathon
+	{
+		//Everything in this method will be run when the button is clicked.
+	    	public void actionPerformed(ActionEvent e)  
+		{
+		     System.out.println("You clicked the button load"); //Check the console
+		 }
+	}
+			   );   
 					
 	}
 
