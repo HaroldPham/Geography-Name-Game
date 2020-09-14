@@ -31,7 +31,6 @@ public class GeographyMain
 	private static Scanner scan;
 	private static JFrame frame;
 	
-	
 	public static void main(String[] args) 
 	{
 		//Import the files into the ArrayLists
@@ -45,8 +44,6 @@ public class GeographyMain
 		//Start window process
 		createWindow();
 	}
-	
-	
 	
 	//Will process the ArrayLists for each continent
 	public static void processFile(String name)
@@ -165,8 +162,7 @@ public class GeographyMain
 		  }
 	}
 	
-	
-	
+	//Window Construction
 	public static void createWindow()
 	{
 		
@@ -174,77 +170,121 @@ public class GeographyMain
 		frame = new JFrame("Geography Name Game"); //Create the frame
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
 
-		//Set up the frame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
 		frame.setResizable(false); //No resizing
 		frame.setAlwaysOnTop(true); //Keep it above other windows for programming purposes
 		frame.setVisible(true); //Visibility
 		
+		//Create the title 
 		JLabel title = new JLabel("Welcome to the Geography Game!");
 		title.setFont(new Font("Arial", Font.PLAIN, 48));
 		JPanel titleP = new JPanel();		
 		titleP.add(title);
 		
 		frame.getContentPane().add(titleP,SwingConstants.CENTER);
-		
 		frame.pack();
 		
 		
-		//Set up the buttons panel.
-        JPanel p = new JPanel();
-        p.setLayout(new SpringLayout());
-        
-        Icon ma = new ImageIcon("marathon.png");
-        Icon ti = new ImageIcon("timed.png");
-        Icon qu = new ImageIcon("quiz.png");
-        
-        //Set up each button.
-        JButton m = new JButton("Marathon");
-        m.setPreferredSize(new Dimension(100,75));
-//        m.setIcon(ma);
-        
-        JButton t = new JButton("Timed");
-        t.setPreferredSize(new Dimension(100,75));
-//        t.setIcon(ti);
-        
-        JButton q = new JButton("Quiz");
-        q.setPreferredSize(new Dimension(100,75));
-//       q.setIcon(qu);
-          
-        //Add the buttons.
-        p.add(m);
-        p.add(t);
-        p.add(q);
+		//Set up the buttons panel
+		JPanel p = new JPanel();
+		p.setLayout(new SpringLayout());
 
-        //Use layout manager to set out the pattern
-        SpringUtilities.makeCompactGrid(p, 1,
-                                        p.getComponentCount(),
-                                        100,              115,           117,          100);
-//        			       LeftPad           TopPad       BetweenPad    BottomPad
-        
-        //Display the window.
-	frame.getContentPane().add(p); //Add the pane to the window so that it will show
-	frame.pack(); //Pack them into that resolution screen
-		
+		Icon ma = new ImageIcon("marathon.png");
+		Icon ti = new ImageIcon("timed.png");
+		Icon qu = new ImageIcon("quiz.png");
 
+		//Set up each button
+		JButton m = new JButton("Marathon");
+		m.setPreferredSize(new Dimension(100,75));
+	//        m.setIcon(ma);
+
+		JButton t = new JButton("Timed");
+		t.setPreferredSize(new Dimension(100,75));
+	//        t.setIcon(ti);
+
+		JButton q = new JButton("Quiz");
+		q.setPreferredSize(new Dimension(100,75));
+	//       q.setIcon(qu);
+
+		//Add the buttons to the panel
+		p.add(m);
+		p.add(t);
+		p.add(q);
+
+		//Use layout manager to set out the pattern
+		SpringUtilities.makeCompactGrid(p, 1,
+						p.getComponentCount(),
+						100,              115,           117,          100);
+	//        		   	       LeftPad           TopPad       BetweenPad    BottomPad
+
+	    //add the panel to the frame.
+		frame.getContentPane().add(p); //Add the pane to the window so that it will show
+		frame.pack(); //Pack them into that resolution screen
 
 
-		
-		
-	//Button Functions
-	m.addActionListener(new ActionListener() //Button click listener for marathon
-	{
-		//Everything in this method will be run when the button is clicked.
-	    	public void actionPerformed(ActionEvent e)  
+		//Button Functions
+		m.addActionListener(new ActionListener() //Button click listener for marathon
 		{
-		     System.out.println("You clicked the button load"); //Check the console
-		 }
-	}
-			   );   
-					
-	}
+			//Everything in this method will be run when the button is clicked.
+		    public void actionPerformed(ActionEvent e)  
+			{
+			//clean the frame and continue.
+			     title.setVisible(false);
+			     p.setVisible(false);
+			     marathon();
+			}
+		}
+				   );   
 
+
+		t.addActionListener(new ActionListener() //Button click listener for timed
+		{
+			//Everything in this method will be run when the button is clicked.
+		    public void actionPerformed(ActionEvent e)  
+			{
+			//clean the frame and continue.
+			     title.setVisible(false);
+			     p.setVisible(false);
+			     timed();
+			}
+		}
+				   );
+
+
+		q.addActionListener(new ActionListener() //Button click listener for quiz
+		{
+			//Everything in this method will be run when the button is clicked.
+		    public void actionPerformed(ActionEvent e)  
+			{
+			//clean the frame and continue.
+			     title.setVisible(false);
+			     p.setVisible(false);
+			     quiz();
+			}
+		}
+				   );
+
+		}
+
+		//Start the marathon game process
+		public static void marathon()
+		{
+
+		}
+
+		//Start the timed game process
+		public static void timed()
+		{
+
+		}
+
+		//Start the quiz game process
+		public static void quiz()
+		{
+		
+	}
 }
+	
 
 /*	
  * public static void answer (String answer){	
