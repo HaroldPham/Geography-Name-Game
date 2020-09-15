@@ -266,26 +266,55 @@ public class GeographyMain
 
 		}
 
-		//Start the marathon game process
-		public static void marathon()
-		{
-
-		}
-
-		//Start the timed game process
-		public static void timed()
-		{
-
-		}
-
-		//Start the quiz game process
-		public static void quiz()
-		{
+	//Start the marathon game process
+	public static void marathon()
+	{
+		Container p = frame.getContentPane();
+		JTextField uInput = new JTextField();
+		
+		continents();
 		
 	}
-	public long currentTimeMillis() {
-			      return System.currentTimeMillis();
-			   }
+	
+	//Start the timed game process
+	public static void timed()
+	{
+		JPanel p = new JPanel();
+		JTextField uInput = new JTextField();
+		
+	}
+	
+	//Start the quiz game process
+	public static void quiz()
+	{
+		JPanel p = new JPanel();
+		JTextField uInput = new JTextField();
+		
+	}
+	
+
+	public static void continents()
+	{
+		GridLayout g = new GridLayout(3,2, 100, 100);
+		
+		JPanel p = new JPanel();
+		p.setLayout(g);
+		
+		p.add(new JButton());
+		p.add(new JButton());
+		p.add(new JButton());
+		p.add(new JButton());
+		p.add(new JButton());
+		p.add(new JButton());
+		
+		
+	}
+	
+}
+	public long currentTimeMillis() 
+	{
+		return System.currentTimeMillis();
+	}
 }
 	
 
