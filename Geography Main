@@ -1,28 +1,14 @@
-
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
  * Creation date: 9/2/2020
  */
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Scanner;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SpringLayout;
-import javax.swing.SwingConstants;
+import java.util.*;
+import javax.swing.*;
 
 public class GeographyMain 
 {
@@ -237,7 +223,6 @@ public class GeographyMain
 			     title.setVisible(false);
 			     p.setVisible(false);
 			     continents();
-			     marathon();
 			}
 		}
 				   );   
@@ -273,7 +258,7 @@ public class GeographyMain
 	}
 
 	//Start the marathon game process
-	public static void marathon()
+	public static void marathon(String continent)
 	{
 		Container p = frame.getContentPane();
 		JTextField uInput = new JTextField();
@@ -302,28 +287,110 @@ public class GeographyMain
 		frame.setLocation(150,275);
 		GridLayout g = new GridLayout(1, 		0, 			0, 			0);
 									//rows	  columns      xPad       yPad
+		
+		//Setup the panel
 		JPanel p = new JPanel();
 		p.setPreferredSize(new Dimension(1250, 200));
 		p.setLayout(g);
 		
+		//Create the components
 		JLabel title = new JLabel("Choose a Continent: ", SwingConstants.CENTER);
+		JButton aus = new JButton("Australia (Easiest)");
+		JButton sa = new JButton("South America");
+		JButton africa = new JButton("Africa");
+		JButton asia = new JButton("Asia");
+		JButton eu = new JButton("Europe");
+		JButton na = new JButton("North America (Hardest)");
 		
 		title.setFont(new Font("Arial", Font.PLAIN, 18));
+		
+		//Add the components
 		p.add(title);
-		p.add(new JButton("Australia (Easiest)"));
-		p.add(new JButton("South America"));
-		p.add(new JButton("Africa"));
-		p.add(new JButton("Asia"));
-		p.add(new JButton("Europe"));
-		p.add(new JButton("North America (Hardest)"));
+		p.add(aus);
+		p.add(sa);
+		p.add(africa);
+		p.add(asia);
+		p.add(eu);
+		p.add(na);
 		
 		p.setVisible(true);
 		frame.add(p);
 		frame.pack();
 		
-		//call up the next process frame
-		marathon();
+		
+		//Give the components meaning
+		aus.addActionListener(new ActionListener() //Button click listener for aus
+				{
+					//Everything in this method will be run when the button is clicked.
+				    public void actionPerformed(ActionEvent e)  
+					{
+				    	p.setVisible(false);
+				    	marathon("Australia");
+					}
+				}
+						   );
+		
+		sa.addActionListener(new ActionListener() //Button click listener for sa
+				{
+					//Everything in this method will be run when the button is clicked.
+				    public void actionPerformed(ActionEvent e)  
+					{
+				    	p.setVisible(false);
+				    	marathon("South America");
+					}
+				}
+						   );
+		
+		africa.addActionListener(new ActionListener() //Button click listener for africa
+				{
+					//Everything in this method will be run when the button is clicked.
+				    public void actionPerformed(ActionEvent e)  
+					{
+				    	p.setVisible(false);
+				    	marathon("Africa");
+					}
+				}
+						   );
+		
+		asia.addActionListener(new ActionListener() //Button click listener for asia
+				{
+					//Everything in this method will be run when the button is clicked.
+				    public void actionPerformed(ActionEvent e)  
+					{
+				    	p.setVisible(false);
+				    	marathon("Asia");
+					}
+				}
+						   );
+		
+		eu.addActionListener(new ActionListener() //Button click listener for eu
+				{
+					//Everything in this method will be run when the button is clicked.
+				    public void actionPerformed(ActionEvent e)  
+					{
+				    	p.setVisible(false);
+				    	marathon("Europe");
+					}
+				}
+						   );
+		
+		na.addActionListener(new ActionListener() //Button click listener for na
+				{
+					//Everything in this method will be run when the button is clicked.
+				    public void actionPerformed(ActionEvent e)  
+					{
+				    	p.setVisible(false);
+				    	marathon("North America");
+					}
+				}
+						   );
+						   
+		
 	}
+	
+	public long currentTimeMillis() {
+			      return System.currentTimeMillis();
+			   }
 	
 }
 	
