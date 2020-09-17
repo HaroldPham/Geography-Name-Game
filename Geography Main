@@ -1,10 +1,13 @@
+
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
  * Creation date: 9/2/2020
  */
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
@@ -42,7 +46,7 @@ public class GeographyMain
 		processFile("Australia");
 		
 		//Start window process
-		createWindow();
+		createTitleScreen();
 	}
 	
 	//Will process the ArrayLists for each continent
@@ -163,13 +167,14 @@ public class GeographyMain
 	}
 	
 	//Window Construction
-	public static void createWindow()
+	public static void createTitleScreen()
 	{
 		
 		//JFrame setup
 		frame = new JFrame("Geography Name Game"); //Create the frame
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
 
+		frame.setLocation(400,250); //Center the frame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
 		frame.setResizable(false); //No resizing
 		frame.setAlwaysOnTop(true); //Keep it above other windows for programming purposes
@@ -186,94 +191,93 @@ public class GeographyMain
 		
 		
 		//Set up the buttons panel
-		JPanel p = new JPanel();
-		p.setLayout(new SpringLayout());
+        JPanel p = new JPanel();
+        p.setLayout(new SpringLayout());
+        
+        Icon ma = new ImageIcon("marathon.png");
+        Icon ti = new ImageIcon("timed.png");
+        Icon qu = new ImageIcon("quiz.png");
+        
+        //Set up each button
+        JButton m = new JButton("Marathon");
+        m.setPreferredSize(new Dimension(100,75));
+//        m.setIcon(ma);
+        
+        JButton t = new JButton("Timed");
+        t.setPreferredSize(new Dimension(100,75));
+//        t.setIcon(ti);
+        
+        JButton q = new JButton("Quiz");
+        q.setPreferredSize(new Dimension(100,75));
+//       q.setIcon(qu);
+          
+        //Add the buttons to the panel
+        p.add(m);
+        p.add(t);
+        p.add(q);
 
-		Icon ma = new ImageIcon("marathon.png");
-		Icon ti = new ImageIcon("timed.png");
-		Icon qu = new ImageIcon("quiz.png");
-
-		//Set up each button
-		JButton m = new JButton("Marathon");
-		m.setPreferredSize(new Dimension(100,75));
-	//        m.setIcon(ma);
-
-		JButton t = new JButton("Timed");
-		t.setPreferredSize(new Dimension(100,75));
-	//        t.setIcon(ti);
-
-		JButton q = new JButton("Quiz");
-		q.setPreferredSize(new Dimension(100,75));
-	//       q.setIcon(qu);
-
-		//Add the buttons to the panel
-		p.add(m);
-		p.add(t);
-		p.add(q);
-
-		//Use layout manager to set out the pattern
-		SpringUtilities.makeCompactGrid(p, 1,
-						p.getComponentCount(),
-						100,              115,           117,          100);
-	//        		   	       LeftPad           TopPad       BetweenPad    BottomPad
-
+        //Use layout manager to set out the pattern
+        SpringUtilities.makeCompactGrid(p, 1,
+                                        p.getComponentCount(),
+                                        100,              115,           117,          100);
+//        			      			   LeftPad           TopPad       BetweenPad    BottomPad
+        
 	    //add the panel to the frame.
 		frame.getContentPane().add(p); //Add the pane to the window so that it will show
 		frame.pack(); //Pack them into that resolution screen
-
-
+		
+		
 		//Button Functions
 		m.addActionListener(new ActionListener() //Button click listener for marathon
 		{
 			//Everything in this method will be run when the button is clicked.
 		    public void actionPerformed(ActionEvent e)  
 			{
-			//clean the frame and continue.
+		    	//clean the frame and continue.
 			     title.setVisible(false);
 			     p.setVisible(false);
+			     continents();
 			     marathon();
 			}
 		}
 				   );   
-
-
+		
+		
 		t.addActionListener(new ActionListener() //Button click listener for timed
 		{
 			//Everything in this method will be run when the button is clicked.
 		    public void actionPerformed(ActionEvent e)  
 			{
-			//clean the frame and continue.
+		    	//clean the frame and continue.
 			     title.setVisible(false);
 			     p.setVisible(false);
 			     timed();
 			}
 		}
 				   );
-
-
+		
+		
 		q.addActionListener(new ActionListener() //Button click listener for quiz
 		{
 			//Everything in this method will be run when the button is clicked.
 		    public void actionPerformed(ActionEvent e)  
 			{
-			//clean the frame and continue.
+		    	//clean the frame and continue.
 			     title.setVisible(false);
 			     p.setVisible(false);
 			     quiz();
 			}
 		}
 				   );
-
-		}
+						
+	}
 
 	//Start the marathon game process
 	public static void marathon()
 	{
 		Container p = frame.getContentPane();
 		JTextField uInput = new JTextField();
-		
-		continents();
-		
+				
 	}
 	
 	//Start the timed game process
@@ -295,26 +299,32 @@ public class GeographyMain
 
 	public static void continents()
 	{
-		GridLayout g = new GridLayout(3,2, 100, 100);
-		
+		frame.setLocation(150,275);
+		GridLayout g = new GridLayout(1, 		0, 			0, 			0);
+									//rows	  columns      xPad       yPad
 		JPanel p = new JPanel();
+		p.setPreferredSize(new Dimension(1250, 200));
 		p.setLayout(g);
 		
-		p.add(new JButton());
-		p.add(new JButton());
-		p.add(new JButton());
-		p.add(new JButton());
-		p.add(new JButton());
-		p.add(new JButton());
+		JLabel title = new JLabel("Choose a Continent: ", SwingConstants.CENTER);
 		
+		title.setFont(new Font("Arial", Font.PLAIN, 18));
+		p.add(title);
+		p.add(new JButton("Australia (Easiest)"));
+		p.add(new JButton("South America"));
+		p.add(new JButton("Africa"));
+		p.add(new JButton("Asia"));
+		p.add(new JButton("Europe"));
+		p.add(new JButton("North America (Hardest)"));
 		
+		p.setVisible(true);
+		frame.add(p);
+		frame.pack();
+		
+		//call up the next process frame
+		marathon();
 	}
 	
-}
-	public long currentTimeMillis() 
-	{
-		return System.currentTimeMillis();
-	}
 }
 	
 
