@@ -297,10 +297,10 @@ public class GeographyMain
 		JLabel title = new JLabel("Choose a Continent: ", SwingConstants.CENTER);
 		JButton aus = new JButton("Australia (Easiest)");
 		JButton sa = new JButton("South America");
-		JButton africa = new JButton("Africa");
-		JButton asia = new JButton("Asia");
+		JButton na = new JButton("North America ");
 		JButton eu = new JButton("Europe");
-		JButton na = new JButton("North America (Hardest)");
+		JButton asia = new JButton("Asia");
+		JButton africa = new JButton("Africa (Hardest)");
 		
 		title.setFont(new Font("Arial", Font.PLAIN, 18));
 		
@@ -308,10 +308,10 @@ public class GeographyMain
 		p.add(title);
 		p.add(aus);
 		p.add(sa);
-		p.add(africa);
-		p.add(asia);
-		p.add(eu);
 		p.add(na);
+		p.add(eu);
+		p.add(asia);
+		p.add(africa);
 		
 		p.setVisible(true);
 		frame.add(p);
@@ -388,9 +388,10 @@ public class GeographyMain
 		
 	}
 	
-	public long currentTimeMillis() {
+	public long currentTimeMillis() 
+	{
 			      return System.currentTimeMillis();
-			   }
+	}
 	
 }
 	
