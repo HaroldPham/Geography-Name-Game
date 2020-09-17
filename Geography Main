@@ -384,7 +384,13 @@ public class GeographyMain
 					}
 				}
 						   );
+						   
+		
 	}
+	
+	public long currentTimeMillis() {
+			      return System.currentTimeMillis();
+			   }
 	
 }
 	
