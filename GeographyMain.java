@@ -1,8 +1,11 @@
+package main;
+
 /*
  * Authors: Harold Pham and Kevin Xu
  * File Detail: This main class will facilitate JFrame mechanics and file reading.
  * Creation date: 9/2/2020
  */
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,6 +23,11 @@ public class GeographyMain
 	private static ArrayList<String> Asia;
 	private static Scanner scan;
 	private static JFrame frame;
+
+	private static Dimension screenRes = Toolkit.getDefaultToolkit().getScreenSize();
+	private static int halfHeight = screenRes.height/2;
+	private static int halfWidth = screenRes.width/2;
+
 	
 	public static void main(String[] args) 
 	{
@@ -155,21 +163,20 @@ public class GeographyMain
 	//Window Construction
 	public static void createTitleScreen()
 	{
-		
 		//JFrame setup
 		frame = new JFrame("Geography Name Game"); //Create the frame
 		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("GNG Logo.jpg"));
-
-		frame.setLocation(400,250); //Center the frame
+		
+		frame.setLocation(halfWidth-375, halfHeight-175); //Center the frame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Make it closable
 		frame.setResizable(false); //No resizing
 		frame.setAlwaysOnTop(true); //Keep it above other windows for programming purposes
 		frame.setVisible(true); //Visibility
-		
+
 		//Create the title 
 		JLabel title = new JLabel("Welcome to the Geography Game!");
 		title.setFont(new Font("Arial", Font.PLAIN, 48));
-		JPanel titleP = new JPanel();		
+		JPanel titleP = new JPanel();
 		titleP.add(title);
 		
 		frame.getContentPane().add(titleP,SwingConstants.CENTER);
@@ -284,7 +291,7 @@ public class GeographyMain
 
 	public static void continents()
 	{
-		frame.setLocation(150,275);
+		frame.setLocation(halfWidth-630,halfHeight-150);
 		GridLayout g = new GridLayout(1, 		0, 			0, 			0);
 									//rows	  columns      xPad       yPad
 		
