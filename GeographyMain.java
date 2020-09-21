@@ -262,12 +262,32 @@ public class GeographyMain
 						
 	}
 
-	//Start the marathon game process
+		//Start the marathon game process
 	public static void marathon(String continent)
 	{
+		frame.setLocation(halfWidth-375, halfHeight-325);
 		Container p = frame.getContentPane();
-		JTextField uInput = new JTextField();
-				
+	//	p.setPreferredSize(new Dimension(600,800));
+		
+		JLabel title = new JLabel("Name as many countries you can from " + continent, SwingConstants.CENTER);
+		
+		title.setPreferredSize(new Dimension(800,150));
+		p.add(title, BorderLayout.PAGE_START);
+		title.setFont(new Font("Arial", Font.PLAIN, 18));
+		title.setBorder(BorderFactory.createLineBorder(Color.black));
+		
+		JLabel countries = new JLabel("TESTING: History of user inputs stored and shown here.", SwingConstants.LEFT);
+		countries.setPreferredSize(new Dimension(800,200));
+		p.add(countries, BorderLayout.CENTER);
+		countries.setVerticalAlignment(SwingConstants.TOP);
+		
+		JTextArea uInput = new JTextArea();
+		uInput.setPreferredSize(new Dimension(800,100));
+		p.add(uInput, BorderLayout.PAGE_END);
+		uInput.setBorder(BorderFactory.createLineBorder(Color.black));
+		
+		frame.pack();
+		p.setVisible(true);
 	}
 	
 	//Start the timed game process
