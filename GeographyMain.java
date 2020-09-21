@@ -422,11 +422,13 @@ public class GeographyMain
 	
 
 /*	
- * public static void answer (String answer){	
- * 		int num = Australia.length();			
+ * public static void answer (String answer, List<String> inputArray){
+ * 		ArrayList<String> copy = inputArray.copy(); 	
+ * 		int num = inputArray.length();			
  * do {	
  * 		if (answer == "" || answer == "" || etc.){	
- * 			System.out.println ("Correct Answer. Please input another answer:");	
+ * 			System.out.println ("Correct Answer. Please input another answer:");
+ * 			AustraliaCopy.remove(answer);	
  * 			num--;	
  * 		} else{	
  * 			System.out.println("Incorrect. Please try again.")		
@@ -434,8 +436,6 @@ public class GeographyMain
  * 		} while (num > 0);	
  * }	
  */
-
-/*
 class RoundButton extends JButton {
   public RoundButton() {
     this(null, null);
